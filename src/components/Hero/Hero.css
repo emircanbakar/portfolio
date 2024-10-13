@@ -1,0 +1,41 @@
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+.canvas {
+  width: 50%;
+  height: 100vh;
+}
+
+.content-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.content-container h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.content-container button {
+  margin-top: 2rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.25rem;
+  color: white;
+  border-radius: 0.5rem;
+  border: 2px solid white;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s all ease;
+}
+
+.content-container button:hover {
+  background-color: white;
+  color: #171717;
+}
