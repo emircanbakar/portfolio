@@ -1,36 +1,27 @@
-.about{
+.about-title {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #494949;
   margin: 0 3rem;
 }
 
-.about-title {
+.about {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.5rem;
+  text-align: end;
+  max-width: 1200px;
+  margin: 0 3rem;
 }
-
-.about-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .about-text {
-  color: #9e9e9e;
-  margin: 1rem;
-  font-size: 1.5rem;
-  line-height: 2.25rem;
+  padding: 3rem ;
+  color: white;
+  font-size: 1.25rem;
+  line-height: 2rem;
 }
 
-.about-skills {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  justify-items: center; 
-  align-items: center;
-  margin-left: 4rem;
-  gap: 20px;
-}
-
-.skill-comp{
-  margin: 1rem;
+.about-img {
+  max-width: 450px;
 }

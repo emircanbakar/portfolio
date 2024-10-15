@@ -9,8 +9,6 @@
 
 html,
 body {
-  height: 100%;
-  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,12 +16,17 @@ body {
   background: #070707;
 }
 
+a{
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  color: inherit;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 1200px;
-  height: 100%;
   color: white;
 }

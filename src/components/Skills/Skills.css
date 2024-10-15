@@ -1,0 +1,34 @@
+.skills {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14rem 3rem;
+  width: 100%;
+}
+
+.skill-title {
+  font-size: 1.5rem;
+  color: #494949;
+}
+
+.skill-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: left;
+  width: 60%;
+}
+
+.skill {
+  font-size: 3rem;
+  color: white;
+  padding: 0.5rem;
+  border-bottom: 2px solid white;
+  transition: 0.3s all ease;
+  opacity: 0.2;
+}
+
+.skill:hover {
+  opacity: 1;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
