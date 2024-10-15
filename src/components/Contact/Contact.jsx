@@ -20,7 +20,7 @@ const Contact = () => {
           Github
         </a>
         <a
-          href="../../../public/emircan_bakar.pdf"
+          href="../../../public/resume4web.pdf"
           className="contact-link"
           target="_blank"
           download
