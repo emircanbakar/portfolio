@@ -45,11 +45,11 @@
     align-items: center;
     flex-direction: column;
     padding: 0;
-    margin: 12rem 1rem;
+    margin: 12rem 0;
   }
 
   .project-link{
-    font-size: 1.5rem;
+    font-size: 1.375rem;
   }
 
   .project p{

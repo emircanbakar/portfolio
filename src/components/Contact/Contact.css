@@ -27,6 +27,10 @@
 }
 
 @media (max-width:480px) {
+    .contact{
+        margin: 14rem 0rem;
+    }
+
     .contact-links{
         display: flex;
         flex-direction: column;

@@ -12,7 +12,7 @@ import Menu from "./assets/Menu/Menu";
 function App() {
   const [loading, setLoading] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
-  
+
   const handleLoaderComplete = () => {
     setLoading(false);
   };
@@ -48,22 +48,24 @@ function App() {
               </ul>
             </nav>
           )}
-          <div id="hero">
-            <Hero />
+          <div className="container">
+            <div id="hero">
+              <Hero />
+            </div>
+            <div id="about">
+              <About />
+            </div>
+            <div id="skills">
+              <Skills />
+            </div>
+            <div id="project">
+              <Project />
+            </div>
+            <div id="contact">
+              <Contact />
+            </div>
+            <Footer />
           </div>
-          <div id="about">
-            <About />
-          </div>
-          <div id="skills">
-            <Skills />
-          </div>
-          <div id="project">
-            <Project />
-          </div>
-          <div id="contact">
-            <Contact />
-          </div>
-          <Footer />
         </div>
       )}
     </>
