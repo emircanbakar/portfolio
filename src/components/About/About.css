@@ -36,7 +36,8 @@
 @media (max-width: 480px) {
   .about {
     text-align: center;
-    padding: 12rem 0;
+    margin: 14rem 0;
+    padding: 0;
   }
 
   .about-title {
