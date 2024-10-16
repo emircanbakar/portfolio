@@ -13,6 +13,13 @@ const Project = () => {
           Coffee Brand Landing Page
         </a>
         <a
+          href="https://yemekle-restaurant-website.vercel.app/#home"
+          target="_blank"
+          className="project-link"
+        >
+          Restaurant Landing Page
+        </a>
+        <a
           href="https://ecommerce-shop-frontend-4tjtwi6zu-emircans-projects-bbfbf17d.vercel.app/products"
           target="_blank"
           className="project-link"
@@ -24,12 +31,10 @@ const Project = () => {
           target="_blank"
           className="project-link"
         >
-          Basic To-Do App
+          To-Do App
         </a>
       </div>
-      <p>
-        If you want to see more projects, visit and follow me on Github!
-      </p>
+      <p>If you want to see more projects, visit and follow me on Github!</p>
     </div>
   );
 };

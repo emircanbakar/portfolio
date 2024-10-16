@@ -1,0 +1,24 @@
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #070707;
+}
+
+.text {
+  color: white;
+  font-size: 3rem;
+  white-space: nowrap;
+  border-right: 2px solid white;
+  animation: blinkEffect 0.5s step-end infinite;
+}
+
+@keyframes blinkEffect {
+  from {
+    border-right-color: black;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}

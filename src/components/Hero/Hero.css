@@ -20,6 +20,7 @@
 .content-container h2 {
   font-size: 2.5rem;
   font-weight: 300;
+  color: white;
 }
 
 .content-container button {
@@ -38,4 +39,20 @@
 .content-container button:hover {
   background-color: white;
   color: #171717;
+}
+
+Canvas {
+  animation: moveObject 2s ease-in-out infinite;
+}
+
+@keyframes moveObject {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

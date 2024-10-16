@@ -1,3 +1,11 @@
+.about {
+  display: flex ;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
 .about-title {
   display: flex;
   justify-content: flex-end;
@@ -7,21 +15,21 @@
   margin: 0 3rem;
 }
 
-.about {
+.about-container {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: end;
-  max-width: 1200px;
   margin: 0 3rem;
 }
 .about-text {
-  padding: 3rem ;
+  padding: 1rem;
   color: white;
   font-size: 1.25rem;
   line-height: 2rem;
 }
 
 .about-img {
+  padding: 1rem;
   max-width: 450px;
 }

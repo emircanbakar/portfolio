@@ -2,11 +2,12 @@ import Scene from "../../../public/Scene";
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
+import "animate.css";
 import "./Hero.css";
 
 const Hero = () => {
   return (
-    <div className="hero-container">
+    <div className="hero-container animate__animated animate__fadeInDown">
       <div className="canvas">
         <Canvas camera={{ position: [0, 5, 5], fov: 100 }}>
           <ambientLight />
