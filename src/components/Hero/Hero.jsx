@@ -24,7 +24,7 @@ const Hero = () => {
       </div>
       <div className="content-container">
         <h2>My name is Emircan, I am a Frontend Developer</h2>
-        <button>Contact Me</button>
+        <a href="#contact" className="button" >Contact Me</a>
       </div>
     </div>
   );

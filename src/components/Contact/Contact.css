@@ -25,3 +25,11 @@
 .contact-link:hover{
     color: #b6b6b6;
 }
+
+@media (max-width:480px) {
+    .contact-links{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}

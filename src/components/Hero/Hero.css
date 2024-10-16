@@ -23,7 +23,7 @@
   color: white;
 }
 
-.content-container button {
+.content-container .button {
   margin-top: 2rem;
   padding: 1rem 1.5rem;
   font-size: 1.25rem;
@@ -36,7 +36,7 @@
   transition: 0.2s all ease;
 }
 
-.content-container button:hover {
+.content-container .button:hover {
   background-color: white;
   color: #171717;
 }
@@ -54,5 +54,28 @@ Canvas {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 2rem;
+  }
+  .canvas{
+    margin-top: 1.5rem;
+  }
+  .content-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-container h2 {
+    text-align: center;
   }
 }

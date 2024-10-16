@@ -1,5 +1,5 @@
 .about {
-  display: flex ;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
@@ -11,7 +11,7 @@
   justify-content: flex-end;
   align-items: center;
   font-size: 1.5rem;
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   color: #494949;
 }
 
@@ -31,4 +31,37 @@
 .about-img {
   padding: 1rem;
   max-width: 450px;
+}
+
+@media (max-width: 480px) {
+  .about {
+    text-align: center;
+    padding: 12rem 2rem;
+  }
+
+  .about-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .about-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    margin: 0 auto;
+    max-width: 360px;
+  }
+  .about-img {
+    max-width: 375px;
+  }
 }
