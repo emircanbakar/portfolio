@@ -1,0 +1,46 @@
+
+.menu {
+  position: fixed; /* Sabit ekran yapısı */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Tam genişlik */
+  height: 100vh; /* Tam yükseklik */
+  background-color: rgba(0, 0, 0, 0.95); /* Saydam siyah arka plan */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hamburger-menu {
+  cursor: pointer;
+  position: fixed; /* Menü butonunun sabit kalması */
+  top: 20px;
+  left: 20px;
+  z-index: 100; /* Menü butonu menünün önünde */
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.menu ul li {
+  padding: 1rem;
+  transition: 0.2s all ease;
+}
+
+.menu ul li a {
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.menu ul li:hover {
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}

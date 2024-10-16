@@ -3,11 +3,12 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 10rem;
+  padding: 14rem 3rem;
 }
 
 .project-title {
   font-size: 1.5rem;
+  padding: 1rem;
   color: #494949;
 }
 
@@ -16,7 +17,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 2rem;
 }
 
 .project-link {

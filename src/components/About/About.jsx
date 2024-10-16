@@ -3,7 +3,7 @@ import comp from "../../assets/comp.png";
 
 const About = () => {
   return (
-    <div className="about">
+    <div className="about" >
       <span className="about-title"> {"<about>"} </span>
       <div className="about-container">
         <span className="about-text">
