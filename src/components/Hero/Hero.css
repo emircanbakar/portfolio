@@ -57,7 +57,7 @@ Canvas {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 660px) {
   .hero-container{
     display: flex;
     justify-content: center;
@@ -73,13 +73,30 @@ Canvas {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .content-container h2 {
     text-align: center;
   }
 
   .content-container .button{
     font-size: 1rem;
+  }
+}
+
+@media (min-width: 661px) and (max-width: 900px) {
+  .hero-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  .canvas{
+    width: 30%;
+    height: 50%;
+  }
+
+  .content-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }

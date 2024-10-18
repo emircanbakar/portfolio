@@ -8,6 +8,7 @@ import Project from "./components/Projects/Project";
 import Footer from "./components/Footer/Footer";
 import Loader from "./components/Loader/Loader";
 import Menu from "./assets/Menu/Menu";
+import { motion } from "framer-motion";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -52,18 +53,54 @@ function App() {
             <div id="hero">
               <Hero />
             </div>
-            <div id="about">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 0.1, duration: 0.3 },
+              }}
+              viewport={{ once: false, amount: 0.5 }}
+              id="about"
+            >
               <About />
-            </div>
-            <div id="skills">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 0.1, duration: 0.3 },
+              }}
+              viewport={{ once: false, amount: 0.5 }}
+              id="skills"
+            >
               <Skills />
-            </div>
-            <div id="project">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 0.1, duration: 0.3 },
+              }}
+              viewport={{ once: false, amount: 0.5 }}
+              id="project"
+            >
               <Project />
-            </div>
-            <div id="contact">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 0.1, duration: 0.3 },
+              }}
+              viewport={{ once: false, amount: 0.5 }}
+              id="contact"
+            >
               <Contact />
-            </div>
+            </motion.div>
             <Footer />
           </div>
         </div>

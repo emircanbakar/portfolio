@@ -1,11 +1,11 @@
 
 .menu {
-  position: fixed; /* Sabit ekran yapısı */
+  position: fixed; 
   top: 0;
   left: 0;
-  width: 100vw; /* Tam genişlik */
-  height: 100vh; /* Tam yükseklik */
-  background-color: rgba(0, 0, 0, 0.95); /* Saydam siyah arka plan */
+  width: 100vw; 
+  height: 100vh; 
+  background-color: rgba(0, 0, 0, 0.95); 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,10 +16,10 @@
 
 .hamburger-menu {
   cursor: pointer;
-  position: fixed; /* Menü butonunun sabit kalması */
+  position: fixed;
   top: 20px;
   left: 20px;
-  z-index: 100; /* Menü butonu menünün önünde */
+  z-index: 100; 
 }
 
 .menu ul {
@@ -30,17 +30,17 @@
 }
 
 .menu ul li {
+  color: white;
   padding: 1rem;
-  transition: 0.2s all ease;
+  transition: .3s all ease;
 }
 
 .menu ul li a {
-  color: white;
   font-size: 2rem;
   text-decoration: none;
 }
 
 .menu ul li:hover {
-  border-bottom: 1px solid white;
+  color: var(--hover-color);
   cursor: pointer;
 }

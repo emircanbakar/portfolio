@@ -16,7 +16,7 @@
 
 @keyframes blinkEffect {
   from {
-    border-right-color: black;
+    border-right-color: rgb(255, 255, 255);
   }
   to {
     border-right-color: transparent;

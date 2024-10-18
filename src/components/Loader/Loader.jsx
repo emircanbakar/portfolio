@@ -16,7 +16,7 @@ const Loader = ({ onComplete }) => {
         clearInterval(intervalId);
         setTimeout(onComplete, 750);
       }
-    }, 250);
+    }, 100);
 
     return () => clearInterval(intervalId);
   }, [onComplete, fullText]);

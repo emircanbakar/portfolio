@@ -10,9 +10,9 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: var(--title-font);
+  color: var(--title-color);
   padding: 0.5rem 2rem;
-  color: #494949;
 }
 
 .about-container {
@@ -33,7 +33,7 @@
   max-width: 450px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 660px) {
   .about {
     text-align: center;
     margin: 14rem 0;
@@ -65,5 +65,33 @@
   }
   .about-img {
     max-width: 375px;
+  }
+}
+
+
+@media (min-width: 661px) and (max-width: 900px) {
+  .about{
+    max-width: 100%;
+  }
+
+  .about-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .about-text {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
   }
 }
