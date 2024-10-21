@@ -68,9 +68,49 @@
   }
 }
 
+.job-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.job-card {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  max-width: 375px;
+  height: 340px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 4px;
+  margin: 3rem;
+  padding: 1.5rem;
+  margin-top: 6rem;
+  color: white;
+}
+
+.job-company,
+.job-title,
+.job-date{
+  font-size: 1.5rem;
+}
+
+.job-desc{
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: var(--title-color);
+}
+
+.edu-img{
+  margin: 1rem;
+  max-width: 200px;
+  height: auto;
+}
 
 @media (min-width: 661px) and (max-width: 900px) {
-  .about{
+  .about {
     max-width: 100%;
   }
 
