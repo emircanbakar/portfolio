@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 auto;
-  padding: 14rem 3rem;
+  align-items: center;
+  position: relative;
+  height: 100vh;
 }
 
 .about-title {
@@ -33,18 +34,83 @@
   max-width: 450px;
 }
 
+.job-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.job-card {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  max-width: 375px;
+  height: 340px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 4px;
+  margin: 3rem;
+  padding: 1.5rem;
+  margin-top: 6rem;
+  color: white;
+}
+
+.job-company,
+.job-title,
+.job-date {
+  font-size: 1.5rem;
+}
+
+.job-desc {
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: var(--title-color);
+}
+
+.edu-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  max-width: 375px;
+  height: 340px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 4px;
+  margin: 3rem;
+  padding: 1.5rem;
+  margin-top: 6rem;
+  color: white;
+}
+
+.edu-img {
+  margin: 1rem;
+  max-width: 160px;
+  height: auto;
+}
+
+.edu-name {
+  font-size: 1.25rem;
+}
+
+.edu-department,
+.edu-date {
+  font-size: 1rem;
+  color: var(--title-color);
+}
+
 @media (max-width: 660px) {
   .about {
     text-align: center;
-    margin: 14rem 0;
-    padding: 0;
   }
 
   .about-title {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 4rem;
   }
 
   .about-container {
@@ -66,47 +132,18 @@
   .about-img {
     max-width: 375px;
   }
-}
 
-.job-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
+  .job-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 
-.job-card {
-  display: flex;
-  justify-content: center;
-  align-items: left;
-  flex-direction: column;
-  max-width: 375px;
-  height: 340px;
-  background-color: transparent;
-  border: 2px solid white;
-  border-radius: 4px;
-  margin: 3rem;
-  padding: 1.5rem;
-  margin-top: 6rem;
-  color: white;
-}
-
-.job-company,
-.job-title,
-.job-date{
-  font-size: 1.5rem;
-}
-
-.job-desc{
-  font-size: 1rem;
-  margin-top: 1rem;
-  color: var(--title-color);
-}
-
-.edu-img{
-  margin: 1rem;
-  max-width: 200px;
-  height: auto;
+  .job-card,
+  .edu-card {
+    margin: 2rem 0;
+  }
 }
 
 @media (min-width: 661px) and (max-width: 900px) {

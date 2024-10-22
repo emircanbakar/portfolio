@@ -5,8 +5,8 @@ import logo from "../../assets/education-logo.png"
 const About = () => {
   return (
     <div>
-      <div className="about">
-        <span className="about-title"> {"<about/experience>"} </span>
+      <div className="about" id="about">
+        <div className="about-title"> {"<about/experience>"} </div>
         <div className="about-container">
           <span className="about-text">
             {
@@ -36,10 +36,10 @@ const About = () => {
               issues for the company's clients and affiliated firms.
             </p>
           </div>
-          <div className="job-card">
+          <div className="edu-card">
             <img className="edu-img" src={logo} />
-            <span className="edu-company">Istanbul Medipol University</span>
-            <span className="edu-title">UI Developer</span>
+            <span className="edu-name">Istanbul Medipol University</span>
+            <span className="edu-department">Management Information Systems</span>
             <span className="edu-date">2020 - 2024</span>
           </div>
         </div>

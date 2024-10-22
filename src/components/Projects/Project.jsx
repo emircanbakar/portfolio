@@ -2,7 +2,7 @@ import "./Project.css";
 
 const Project = () => {
   return (
-    <div className="project">
+    <div className="project" id="project">
       <span className="project-title"> {"<projects>"} </span>
       <div className="project-links">
         <a

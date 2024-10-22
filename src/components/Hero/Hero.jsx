@@ -7,8 +7,8 @@ import "./Hero.css";
 
 const Hero = () => {
   return (
-    <div className="hero-container animate__animated animate__fadeInDown">
-      <div className="canvas">
+    <div className="hero animate__animated animate__fadeInDown">
+      <div className="canvas" id="hero">
         <Canvas camera={{ position: [0, 5, 5], fov: 100 }}>
           <ambientLight />
           <OrbitControls

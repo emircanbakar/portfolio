@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 14rem 1rem;
+  height: 100vh;
 }
 
 .contact-title {
@@ -27,10 +27,6 @@
 }
 
 @media (max-width: 660px) {
-  .contact {
-    margin: 14rem 0rem;
-  }
-
   .contact-links {
     display: flex;
     flex-direction: column;

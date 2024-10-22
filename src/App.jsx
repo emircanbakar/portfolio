@@ -50,55 +50,27 @@ function App() {
             </nav>
           )}
           <div className="container">
-            <div id="hero">
+            <div>
               <Hero />
             </div>
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: { delay: 0.1, duration: 0.3 },
-              }}
-              viewport={{ once: false, amount: 0.5 }}
-              id="about"
+            // initial={{ opacity: 0, y: 50 }}
+            // whileInView={{
+            //   opacity: 1,
+            //   y: 0,
+            //   transition: { delay: 0.1, duration: 0.3 },
+            // }}
+            // viewport={{ once: false, amount: 0.5 }}
             >
               <About />
             </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: { delay: 0.1, duration: 0.3 },
-              }}
-              viewport={{ once: false, amount: 0.5 }}
-              id="skills"
-            >
+            <motion.div>
               <Skills />
             </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: { delay: 0.1, duration: 0.3 },
-              }}
-              viewport={{ once: false, amount: 0.5 }}
-              id="project"
-            >
+            <motion.div>
               <Project />
             </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: { delay: 0.1, duration: 0.3 },
-              }}
-              viewport={{ once: false, amount: 0.5 }}
-              id="contact"
-            >
+            <motion.div>
               <Contact />
             </motion.div>
             <Footer />
