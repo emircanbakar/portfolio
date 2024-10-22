@@ -149,6 +149,7 @@
 
 @media (min-width: 661px) and (max-width: 900px) {
   .about {
+    height: auto;
     max-width: 100%;
   }
 
@@ -172,4 +173,17 @@
     text-align: center;
     margin: auto;
   }
+
+    .job-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .job-card,
+  .edu-card {
+    margin: 2rem 0;
+  }
+  
 }
