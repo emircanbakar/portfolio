@@ -23,7 +23,7 @@ const Hero = () => {
         </Canvas>
       </div>
       <div className="content-container">
-        <h2>My name is Emircan, I am a Frontend Developer</h2>
+        <span className="content-title">My name is Emircan, I am a Frontend Developer</span>
         <a href="#contact" className="button" >Contact Me</a>
       </div>
     </div>

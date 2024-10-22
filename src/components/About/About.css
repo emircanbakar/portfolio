@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
   height: 100vh;
 }
 
@@ -105,6 +104,8 @@
 @media (max-width: 660px) {
   .about {
     text-align: center;
+    height: auto;
+    margin-top: 4rem;
   }
 
   .about-title {

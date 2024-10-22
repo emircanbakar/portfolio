@@ -50,27 +50,49 @@ function App() {
             </nav>
           )}
           <div className="container">
-            <div>
-              <Hero />
-            </div>
+            <Hero/>
             <motion.div
-            // initial={{ opacity: 0, y: 50 }}
-            // whileInView={{
-            //   opacity: 1,
-            //   y: 0,
-            //   transition: { delay: 0.1, duration: 0.3 },
-            // }}
-            // viewport={{ once: false, amount: 0.5 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 0.1, duration: 0.3 },
+              }}
+              viewport={{ once: false, amount: 0.2 }}
             >
               <About />
             </motion.div>
-            <motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 0.1, duration: 0.3 },
+              }}
+              viewport={{ once: false, amount: 0.4}}
+            >
               <Skills />
             </motion.div>
-            <motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 0.1, duration: 0.3 },
+              }}
+              viewport={{ once: false, amount: 0.4 }}
+            >
               <Project />
             </motion.div>
-            <motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 0.1, duration: 0.3 },
+              }}
+              viewport={{ once: false, amount: 0.4 }}
+            >
               <Contact />
             </motion.div>
             <Footer />
