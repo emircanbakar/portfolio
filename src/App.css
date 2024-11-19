@@ -15,4 +15,9 @@
   align-items: center;
   max-width: 1440px;
   gap: 8rem;
+  color: wheat;
+}
+
+.image{
+  width: 20px;
 }

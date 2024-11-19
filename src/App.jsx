@@ -1,6 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import Loader from "./components/Loader/Loader";
+import Left from "./components/Left";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -13,10 +14,8 @@ function App() {
       {loading ? (
         <Loader onComplete={handleLoaderComplete} />
       ) : (
-        <div>
-          <div className="container">
-            <h2>Hi there</h2>
-          </div>
+        <div className="container">
+          <Left />
         </div>
       )}
     </>
