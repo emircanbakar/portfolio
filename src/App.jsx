@@ -10,15 +10,16 @@ function App() {
   };
 
   return (
-    <>
-      {loading ? (
+    <div className="container">
+      {/* {loading ? (
         <Loader onComplete={handleLoaderComplete} />
       ) : (
         <div className="container">
           <Left />
         </div>
-      )}
-    </>
+      )} */}
+      <Left/>
+    </div>
   );
 }
 

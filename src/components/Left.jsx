@@ -13,11 +13,16 @@ import ts from "../assets/ts.png";
 
 const Left = () => {
   return (
-    <>
+    <div className="left">
       <div className="title">
         <span>Software Developer</span>
         <span>Emircan Bakar</span>
       </div>
+      <span className="about">
+        {
+          "I'm a Frontend Developer who designs simple, impactful, and functional web interfaces tailored to users' needs. I focus on delivering aesthetic and intuitive web experiences by providing creative solutions. I stay up-to-date with technology, pay attention to details, and strive to achieve better results with every project."
+        }
+      </span>
       <div className="languages">
         <div className="img-container">
           <img src={html} alt="" className="image" />
@@ -39,7 +44,7 @@ const Left = () => {
         <span>Github</span>
         <span>Resume</span>
       </div>
-    </>
+    </div>
   );
 };
 
