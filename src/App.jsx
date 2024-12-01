@@ -2,6 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import Loader from "./components/Loader/Loader";
 import Left from "./components/Left";
+import Right from "./components/Right";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -19,6 +20,7 @@ function App() {
         </div>
       )} */}
       <Left/>
+      <Right/>
     </div>
   );
 }
