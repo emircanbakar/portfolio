@@ -1,26 +1,17 @@
 import "./App.css";
-import { useState } from "react";
-import Loader from "./components/Loader/Loader";
-import Left from "./components/Left";
-import Right from "./components/Right";
+import About from "./components/About";
+// import { useState } from "react";
+// import Loader from "./components/Loader/Loader";
 
 function App() {
-  const [loading, setLoading] = useState(true);
-  const handleLoaderComplete = () => {
-    setLoading(false);
-  };
+  // const [loading, setLoading] = useState(true);
+  // const handleLoaderComplete = () => {
+  //   setLoading(false);
+  // };
 
   return (
-    <div className="container">
-      {/* {loading ? (
-        <Loader onComplete={handleLoaderComplete} />
-      ) : (
-        <div className="container">
-          <Left />
-        </div>
-      )} */}
-      <Left/>
-      <Right/>
+    <div className="flex flex-row text-white bg-black">
+      <About/>
     </div>
   );
 }
