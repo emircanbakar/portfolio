@@ -1,7 +1,7 @@
-const About = () => {
+const About = ({ isOpen, handleToggle }) => {
   return (
-    <div className="flex max-w-[440px] max-h-[400px] text-xl test-right text-justify">
-      <span>
+    <div className="flex max-w-[540px] min-h-[250px] text-xl test-right text-justify  border-l-2 border-white text-white">
+      <span onClick={() => handleToggle()} className="mx-6">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -17,11 +17,13 @@ const About = () => {
           />
         </svg>
       </span>
-      <p>
-        {
-          "Hi! I'm Emircan, a Frontend Developer passionate about building modern and user-friendly interfaces. I constantly learn and strive to create clean and efficient solutions in my projects."
-        }
-      </p>
+      {isOpen && (
+        <p>
+          {
+            "Hi! I'm Emircan, a Frontend Developer passionate about building modern and user-friendly interfaces. I constantly learn and strive to create clean and efficient solutions in my projects."
+          }
+        </p>
+      )}
     </div>
   );
 };
