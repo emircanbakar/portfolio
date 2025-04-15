@@ -1,6 +1,6 @@
 import About from "./views/About";
-import Contact from "./views/Contact";
-import Experience from "./views/Experience";
+// import Contact from "./views/Contact";
+// import Experience from "./views/Experience";
 import { useState } from "react";
 
 const App = () => {
@@ -8,7 +8,9 @@ const App = () => {
   const handleToggle = (componentName) => {
     setIsOpen((prev) => (prev === componentName ? null : componentName));
   };
-
+  //Todo: add new design to the all components and add animation.
+  //Todo: create a context for functions and states
+  //Todo: create a color palette and use it in all components
   return (
     <div className="flex flex-row items-center justify-between h-screen bg-black text-gray-600 max-w-[1152px] max-h-[600px]: m-auto gap-16">
       <div className="flex flex-col items-left justify-center">
@@ -20,14 +22,14 @@ const App = () => {
           handleToggle={() => handleToggle("about")}
           isOpen={isOpen === "about"}
         />
-        <Experience
+        {/* <Experience
           handleToggle={() => handleToggle("experience")}
           isOpen={isOpen === "experience"}
         />
         <Contact
           handleToggle={() => handleToggle("contact")}
           isOpen={isOpen === "contact"}
-        />
+        /> */}
       </div>
     </div>
   );
