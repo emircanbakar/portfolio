@@ -17,18 +17,30 @@ const About = ({ isOpen, handleToggle }) => {
   ];
 
   const [currentPage, setCurrentPage] = useState(0);
+  const [fade, setFade] = useState(true);
 
   const handleNext = () => {
-    setCurrentPage((prev) => (prev < items.length - 1 ? prev + 1 : prev));
+    if (currentPage < items.length - 1) {
+      setFade(false);
+      setTimeout(() => {
+        setCurrentPage((prev) => prev + 1);
+        setFade(true);
+      }, 300);
+    }
   };
 
   const handlePrev = () => {
-    setCurrentPage((prev) => (prev > 0 ? prev - 1 : prev));
+    if (currentPage > 0) {
+      setFade(false);
+      setTimeout(() => {
+        setCurrentPage((prev) => prev - 1);
+        setFade(true);
+      }, 300);
+    }
   };
 
-  //TODO: add animation to the text and pagination
   return (
-    <div className="flex flex-row justify-center items-center max-w-[540px] min-h-[250px] text-xl test-right text-justify  border-l-2 border-white text-white">
+    <div className="flex flex-row justify-center items-center max-w-[540px] min-h-[250px] text-xl test-right text-justify border-l-2 border-white text-white">
       <span onClick={() => handleToggle()} className="mx-6">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -45,18 +57,18 @@ const About = ({ isOpen, handleToggle }) => {
           />
         </svg>
       </span>
+
       {isOpen && (
-        <div>
-          <div className="flex flex-col items-center justify-center ">
-            {items.map((item, index) =>
-              index === currentPage ? (
-                <ul key={item.id}>
-                  <li>{item.text}</li>
-                </ul>
-              ) : null
-            )}
-          </div>
-          <div className="flex justify-between mt-4">
+        <div className="flex flex-col items-center justify-center">
+          <ul
+            className={`transition-opacity duration-300 ${
+              fade ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <li key={items[currentPage].id}>{items[currentPage].text}</li>
+          </ul>
+
+          <div className="flex justify-between items-center mt-6 w-full">
             <button
               onClick={handlePrev}
               disabled={currentPage === 0}
@@ -64,17 +76,25 @@ const About = ({ isOpen, handleToggle }) => {
             >
               Previous
             </button>
-            <div className="flex justify-center mt-4 gap-2">
+
+            <div className="flex justify-center gap-2">
               {items.map((_, index) => (
                 <span
                   key={index}
-                  onClick={() => setCurrentPage(index)}
+                  onClick={() => {
+                    setFade(false);
+                    setTimeout(() => {
+                      setCurrentPage(index);
+                      setFade(true);
+                    }, 300);
+                  }}
                   className={`w-2 h-2 rounded-full cursor-pointer transition-all duration-300 ${
                     currentPage === index ? "bg-white" : "bg-gray-500"
                   }`}
                 ></span>
               ))}
             </div>
+
             <button
               onClick={handleNext}
               disabled={currentPage === items.length - 1}
