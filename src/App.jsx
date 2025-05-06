@@ -1,36 +1,16 @@
-import About from "./views/About";
-// import Contact from "./views/Contact";
-// import Experience from "./views/Experience";
-import { useState } from "react";
+import About from "./components/About";
+import Nav from "./components/Nav";
 
 const App = () => {
-  const [isOpen, setIsOpen] = useState(null);
-  const handleToggle = (componentName) => {
-    setIsOpen((prev) => (prev === componentName ? null : componentName));
-  };
-  //Todo: add new design to the all components and add animation.
-  //Todo: create a context for functions and states
-  //Todo: create a color palette and use it in all components
   return (
-    <div className="flex flex-row items-center justify-between h-screen bg-black text-gray-600 max-w-[1152px] max-h-[600px]: m-auto gap-16">
-      <div className="flex flex-col items-left justify-center">
-        <span className="text-4xl font-bold">Emircan Bakar</span>
-        <h3 className="text-2xl font-light">Software Engineer</h3>
+    <div className="flex flex-row items-center justify-center gap-32 h-screen mx-16">
+      <div className="flex flex-col items-start justify-center text-white max-w-[700px] gap-8">
+        <div>
+          <span className="text-[96px] font-700 text-left">{`I'm Emircan Bakar.`}</span>
+        </div>
+        <About />
       </div>
-      <div className="flex flex-row items-center justify-center gap-4">
-        <About
-          handleToggle={() => handleToggle("about")}
-          isOpen={isOpen === "about"}
-        />
-        {/* <Experience
-          handleToggle={() => handleToggle("experience")}
-          isOpen={isOpen === "experience"}
-        />
-        <Contact
-          handleToggle={() => handleToggle("contact")}
-          isOpen={isOpen === "contact"}
-        /> */}
-      </div>
+      <Nav />
     </div>
   );
 };
