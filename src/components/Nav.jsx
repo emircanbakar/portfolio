@@ -1,12 +1,20 @@
-const Nav = () => {
+const Nav = ({ active, setActive }) => {
+  const items = ["About", "Experience", "Contact", "Latest Projects"];
+
   return (
-    <div className=" text-white text-[24px] mx-4">
-      <ul className="flex flex-col items-end gap-12 font-300 border-white border-b-2">
-        <li className="text-[16px] text-stone-600 ">Software Developer</li>
-        <li>About</li>
-        <li>Experience</li>
-        <li>Contact</li>
-        <li>Latest Projects</li>
+    <div className="text-white text-[24px] mx-4">
+      <ul className="flex flex-col items-end gap-12 font-300">
+        {items.map((item) => (
+          <li
+            key={item}
+            className={`text-[16px] cursor-pointer ${
+              active === item ? "text-white" : "text-stone-600"
+            }`}
+            onClick={() => setActive(item)}
+          >
+            {item}
+          </li>
+        ))}
       </ul>
     </div>
   );
