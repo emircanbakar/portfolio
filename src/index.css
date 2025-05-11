@@ -1,42 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
+
+/* <weight>: Use a value from 300 to 700  */
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
+  background-color: black;
+  font-family: "Red Hat Text", sans-serif;
 }
 
-html,
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Poppins", serif;
-  scrollbar-width: thin;
-  background-color: var(--background-color);
-}
-
-a {
-  list-style: none;
-  text-decoration: none;
-  border: none;
-  color: inherit;
-}
-
-
-::-webkit-scrollbar{
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--background-color);  
-}
-
-::-webkit-scrollbar-thumb{
-  background-color: #4d4d4d; 
-  border-radius: 10px;
-  transition: .2s all ease;
-}
-
-::-webkit-scrollbar-thumb:hover{
-  background-color: #f1f1f1; 
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -1,106 +1,84 @@
-import "./App.css";
-import { useState } from "react";
-import Hero from "./components/Hero/Hero";
-import About from "./components/About/About";
-import Skills from "./components/Skills/Skills";
-import Contact from "./components/Contact/Contact";
-import Project from "./components/Projects/Project";
-import Footer from "./components/Footer/Footer";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Experience from "./components/Experience";
+import Latest from "./components/Latest";
+import Nav from "./components/Nav";
 import Loader from "./components/Loader/Loader";
-import Menu from "./assets/Menu/Menu";
-import { motion } from "framer-motion";
 
-function App() {
+const App = () => {
+  const [active, setActive] = useState("About");
   const [loading, setLoading] = useState(true);
-  const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleLoaderComplete = () => {
-    setLoading(false);
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const renderSection = () => {
+    let Component = null;
+
+    switch (active) {
+      case "About":
+        Component = About;
+        break;
+      case "Experience":
+        Component = Experience;
+        break;
+      case "Contact":
+        Component = Contact;
+        break;
+      case "Latest Projects":
+        Component = Latest;
+        break;
+      default:
+        return null;
+    }
+
+    return (
+      <motion.div
+        key={active}
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -10 }}
+        transition={{ duration: 0.3 }}
+        className="absolute top-0 left-0 w-full h-full mt-2"
+      >
+        <Component />
+      </motion.div>
+    );
   };
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+
+  if (loading) return <Loader />;
 
   return (
-    <>
-      {loading ? (
-        <Loader onComplete={handleLoaderComplete} />
-      ) : (
+    <div className="flex flex-row items-center justify-center gap-32 h-screen mx-16">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="flex flex-col items-start justify-center text-white max-w-[700px] h-[450px] gap-4"
+      >
         <div>
-          <Menu onClick={toggleMenu} />
-          {menuOpen && (
-            <nav className="menu" onClick={toggleMenu}>
-              <ul>
-                <li>
-                  <a href="#hero">Home</a>
-                </li>
-                <li>
-                  <a href="#about">About</a>
-                </li>
-                <li>
-                  <a href="#skills">Skills</a>
-                </li>
-                <li>
-                  <a href="#project">Projects</a>
-                </li>
-                <li>
-                  <a href="#contact">Contact</a>
-                </li>
-              </ul>
-            </nav>
-          )}
-          <div className="container">
-            <Hero/>
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: { delay: 0.1, duration: 0.3 },
-              }}
-              viewport={{ once: false, amount: 0.2 }}
-            >
-              <About />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: { delay: 0.1, duration: 0.3 },
-              }}
-              viewport={{ once: false, amount: 0.4}}
-            >
-              <Skills />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: { delay: 0.1, duration: 0.3 },
-              }}
-              viewport={{ once: false, amount: 0.4 }}
-            >
-              <Project />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: { delay: 0.1, duration: 0.3 },
-              }}
-              viewport={{ once: false, amount: 0.4 }}
-            >
-              <Contact />
-            </motion.div>
-            <Footer />
-          </div>
+          <span className="text-[96px]/[80px] bg-transparent font-700 text-left cursor-default select-none">
+            {`I'm Emircan Bakar.`}
+          </span>
         </div>
-      )}
-    </>
+        <div className="relative w-full h-[158px] overflow-hidden">
+          <AnimatePresence mode="wait">{renderSection()}</AnimatePresence>
+        </div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        className="w-1/4"
+      >
+        <Nav active={active} setActive={setActive} />
+      </motion.div>
+    </div>
   );
-}
+};
 
 export default App;
