@@ -43,7 +43,7 @@ const App = () => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -10 }}
         transition={{ duration: 0.3 }}
-        className="absolute top-0 left-0 w-full h-full mt-2"
+        className="relative w-full h-full mt-2"
       >
         <Component />
       </motion.div>
@@ -53,19 +53,19 @@ const App = () => {
   if (loading) return <Loader />;
 
   return (
-    <div className="flex flex-row items-center justify-center gap-32 h-screen mx-16">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-32 min-h-screen mx-4 md:mx-16">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="flex flex-col items-start justify-center text-white max-w-[700px] h-[450px] gap-4"
+        className="flex flex-col items-start justify-center text-white max-w-[700px] h-full gap-4"
       >
         <div>
           <span className="text-[96px]/[80px] bg-transparent font-700 text-left cursor-default select-none">
             {`I'm Emircan Bakar.`}
           </span>
         </div>
-        <div className="relative w-full h-[158px] overflow-hidden">
+        <div className="relative w-full min-h-[158px] overflow-auto">
           <AnimatePresence mode="wait">{renderSection()}</AnimatePresence>
         </div>
       </motion.div>
@@ -73,7 +73,7 @@ const App = () => {
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
-        className="w-1/4"
+        className="w-full md:w-1/4"
       >
         <Nav active={active} setActive={setActive} />
       </motion.div>
