@@ -9,10 +9,10 @@ import Loader from "./components/Loader/Loader";
 
 const App = () => {
   const [active, setActive] = useState("About");
-  const [loading, setLoading] = useState(true); // loader state
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2000); // 2 saniyelik loader
+    const timer = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -54,7 +54,6 @@ const App = () => {
 
   return (
     <div className="flex flex-row items-center justify-center gap-32 h-screen mx-16">
-      {/* Adın olduğu kısma animasyon ekle */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -66,13 +65,10 @@ const App = () => {
             {`I'm Emircan Bakar.`}
           </span>
         </div>
-        {/* Sabit yükseklikli animasyon bölgesi */}
         <div className="relative w-full h-[158px] overflow-hidden">
           <AnimatePresence mode="wait">{renderSection()}</AnimatePresence>
         </div>
       </motion.div>
-
-      {/* Nav componenti için animasyon */}
       <motion.div
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}

@@ -16,7 +16,6 @@ const Nav = ({ active, setActive }) => {
             onClick={() => setActive(item)}
           >
             {item}
-            {/* Alt çizgi */}
             <span
               className={`absolute left-0 bottom-[-4px] h-[2px] w-full transition-opacity duration-300 ${
                 active === item ? "opacity-100 bg-white" : "opacity-0"
