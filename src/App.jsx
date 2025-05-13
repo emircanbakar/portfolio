@@ -65,7 +65,7 @@ const App = () => {
             {`I'm Emircan Bakar.`}
           </span>
         </div>
-        <div className="relative w-full min-h-[158px] overflow-auto">
+        <div className="relative w-full min-h-[158px] ">
           <AnimatePresence mode="wait">{renderSection()}</AnimatePresence>
         </div>
       </motion.div>
