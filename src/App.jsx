@@ -43,7 +43,7 @@ const App = () => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -10 }}
         transition={{ duration: 0.3 }}
-        className="relative w-full h-full mt-2"
+        className="mt-2 w-full"
       >
         <Component />
       </motion.div>
@@ -53,30 +53,46 @@ const App = () => {
   if (loading) return <Loader />;
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center gap-32 min-h-screen mx-4 md:mx-16">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="flex flex-col items-start justify-center text-white max-w-[700px] h-full gap-4"
-      >
-        <div>
-          <span className="text-[96px]/[80px] bg-transparent font-700 text-left cursor-default select-none">
-            {`I'm Emircan Bakar.`}
-          </span>
-        </div>
-        <div className="relative w-full min-h-[158px] ">
-          <AnimatePresence mode="wait">{renderSection()}</AnimatePresence>
-        </div>
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6 }}
-        className="w-full md:w-1/4"
-      >
+    <div className="min-h-screen bg-black">
+      {/* Mobil: Nav yukarıda */}
+      <div className="block lg:hidden mt-12">
         <Nav active={active} setActive={setActive} />
-      </motion.div>
+      </div>
+
+      {/* Masaüstü düzen */}
+      <div className="hidden lg:flex flex-row items-center justify-center gap-32 h-screen mx-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col items-start justify-center text-white max-w-[700px] h-[450px] gap-4"
+        >
+          <div>
+            <span className="text-[96px]/[80px] bg-transparent font-700 text-left cursor-default select-none">
+              {`I'm Emircan Bakar.`}
+            </span>
+          </div>
+          <div className="relative w-full h-[158px] overflow-hidden">
+            <AnimatePresence mode="wait">{renderSection()}</AnimatePresence>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="w-1/4"
+        >
+          <Nav active={active} setActive={setActive} />
+        </motion.div>
+      </div>
+
+      <div className="block lg:hidden px-4 mt-20">
+        <h1 className="text-white text-[36px] font-bold mb-6">
+          {"I'm Emircan Bakar."}
+        </h1>
+        <AnimatePresence mode="wait">{renderSection()}</AnimatePresence>
+      </div>
     </div>
   );
 };
