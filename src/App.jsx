@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
-import Latest from "./components/Latest";
+// import Latest from "./components/Latest";
 import Nav from "./components/Nav";
 import Loader from "./components/Loader/Loader";
 
@@ -29,9 +29,9 @@ const App = () => {
       case "Contact":
         Component = Contact;
         break;
-      case "Latest Projects":
-        Component = Latest;
-        break;
+      // case "Latest Projects":
+      //   Component = Latest;
+      //   break;
       default:
         return null;
     }
@@ -53,7 +53,7 @@ const App = () => {
   if (loading) return <Loader />;
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black overflow-hidden md:p-2">
       {/* Mobil: Nav yukarıda */}
       <div className="block lg:hidden mt-12">
         <Nav active={active} setActive={setActive} />
@@ -87,8 +87,8 @@ const App = () => {
         </motion.div>
       </div>
 
-      <div className="block lg:hidden px-4 mt-20">
-        <h1 className="text-white text-[36px] font-bold mb-6">
+      <div className="block lg:hidden px-4 mt-10">
+        <h1 className="text-stone-800 text-[36px] font-bold mb-6">
           {"I'm Emircan Bakar."}
         </h1>
         <AnimatePresence mode="wait">{renderSection()}</AnimatePresence>

@@ -3,7 +3,12 @@ import { FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 
 const Nav = ({ active, setActive }) => {
-  const items = ["About", "Experience", "Contact", "Latest Projects"];
+  const items = [
+    "About",
+    "Experience",
+    "Contact",
+    //  "Latest Projects"
+  ];
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -17,7 +22,6 @@ const Nav = ({ active, setActive }) => {
 
   return (
     <div className="text-white text-[24px] mx-4 z-50">
-      {/* Mobil hamburger */}
       <div className="block lg:hidden">
         <button onClick={toggleMenu} className="text-2xl z-50 relative">
           <FaBars />
@@ -49,16 +53,15 @@ const Nav = ({ active, setActive }) => {
         </div>
       )}
 
-      {/* Masaüstü menü */}
       <div className="hidden lg:block">
-        <ul className="flex flex-col items-end gap-12 font-300">
+        <ul className="flex flex-col items-end gap-12 font-300 text-right">
           <li className="text-[12px] text-stone-600 select-none cursor-default">
             Software Developer
           </li>
           {items.map((item) => (
             <li
               key={item}
-              className={`relative text-[16px] cursor-pointer transition-colors duration-300 ${
+              className={`relative text-[16px] cursor-pointer transition-colors duration-300 text-right ${
                 active === item ? "text-white" : "text-stone-600"
               }`}
               onClick={() => setActive(item)}
