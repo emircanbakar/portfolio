@@ -20,8 +20,8 @@ const Contact = () => {
           </li>
           <li>
             <a
-              href="/public/emircan_bakar_cv.pdf"
-              download="emircan_bakar_cv.pdf"
+              href="/public/emircanbakar_cv.pdf"
+              download="emircanbakar_cv.pdf"
             >
               <FaFileAlt className="text-6xl" />
             </a>
