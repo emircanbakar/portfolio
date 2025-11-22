@@ -5,7 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        space: ['Space Grotesk', 'sans-serif'],
+        mono: ['Space Grotesk', 'monospace'], // Using Space Grotesk for mono feel or could use actual mono
+      },
+    },
   },
   plugins: [],
 }
