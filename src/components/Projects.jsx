@@ -6,25 +6,17 @@ const projects = [
         name: "harita.istanbul",
         description:
             "A comprehensive map application for Istanbul. Features interactive layers, search functionality, and real-time data integration.",
-        tech: ["React", "Mapbox/Leaflet", "API Integration"],
+        tech: ["React", "Maplibre GL JS", "Redux", "API Integration", "Tailwind CSS"],
         link: "https://harita.istanbul",
-        github: null, // Assuming private or not provided
-    },
-    {
-        name: "Coffee Shop",
-        description:
-            "A modern landing page for a coffee shop featuring a clean design, menu showcase, and responsive layout.",
-        tech: ["React", "Tailwind CSS", "Framer Motion"],
-        link: "https://kahvem-coffee-website.vercel.app/#home",
         github: null,
     },
     {
-        name: "Restaurant",
+        name: "Note Taker AI",
         description:
-            "A restaurant website template with reservation capabilities, menu display, and gallery.",
-        tech: ["React", "CSS Modules", "Responsive Design"],
-        link: "https://yemekle-restaurant-website.vercel.app/#home",
-        github: null,
+            "An AI-powered platform for PDF management and smart note-taking with vector search and Google Gemini integration.",
+        tech: ["React", "Langchain / Gemini", "Convex", "Clerk", "Shadcn UI", "Nextjs"],
+        link: null,
+        github: "https://github.com/emircanbakar/note-taker-ai",
     },
 ];
 
@@ -55,13 +47,15 @@ const Projects = () => {
                     {projects.map((project, index) => (
                         <motion.div
                             key={index}
-                            whileHover={{ y: -10 }}
-                            className="bg-stone-900/50 border border-stone-800 p-8 flex flex-col justify-between hover:border-stone-600 transition-colors group"
+                            whileHover={{ y: -10, scale: 1.02 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                            className="bg-stone-900/50 border border-stone-800 p-8 flex flex-col justify-between hover:border-white/30 hover:shadow-[0_0_30px_-5px_rgba(255,255,255,0.1)] transition-all duration-300 group rounded-lg relative overflow-hidden"
                         >
-                            <div>
+                            <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                            <div className="relative z-10">
                                 <div className="flex justify-between items-start mb-6">
-                                    <div className="text-4xl text-gray-700 group-hover:text-white transition-colors">
-                                        {/* Folder icon or similar could go here */}
+                                    <div className="text-4xl text-gray-700 group-hover:text-white transition-colors duration-300">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             role="img"
@@ -71,7 +65,7 @@ const Projects = () => {
                                             strokeWidth="1"
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
-                                            className="w-10 h-10"
+                                            className="w-10 h-10 group-hover:stroke-2 transition-all"
                                         >
                                             <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
                                         </svg>
@@ -82,23 +76,25 @@ const Projects = () => {
                                                 href={project.github}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-gray-400 hover:text-white"
+                                                className="text-gray-400 hover:text-white transition-colors hover:scale-110 transform"
                                             >
                                                 <Github size={20} />
                                             </a>
                                         )}
-                                        <a
-                                            href={project.link}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="text-gray-400 hover:text-white"
-                                        >
-                                            <ExternalLink size={20} />
-                                        </a>
+                                        {project.link && (
+                                            <a
+                                                href={project.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-gray-400 hover:text-white transition-colors hover:scale-110 transform"
+                                            >
+                                                <ExternalLink size={20} />
+                                            </a>
+                                        )}
                                     </div>
                                 </div>
 
-                                <h3 className="text-xl font-bold text-white mb-2">
+                                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-400 transition-all">
                                     {project.name}
                                 </h3>
                                 <p className="text-gray-400 text-sm mb-6 leading-relaxed">
@@ -106,9 +102,9 @@ const Projects = () => {
                                 </p>
                             </div>
 
-                            <ul className="flex flex-wrap gap-3 text-xs font-mono text-gray-500">
+                            <ul className="flex flex-wrap gap-3 text-xs font-mono text-gray-500 relative z-10">
                                 {project.tech.map((tech) => (
-                                    <li key={tech}>{tech}</li>
+                                    <li key={tech} className="bg-white/5 px-2 py-1 rounded group-hover:bg-white/10 transition-colors">{tech}</li>
                                 ))}
                             </ul>
                         </motion.div>

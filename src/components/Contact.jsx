@@ -44,17 +44,10 @@ const Contact = () => {
           >
             <FileText size={32} />
           </a>
-          <a
-            href="mailto:emircanbakar@example.com" // Assuming email, or I can remove if not known
-            className="text-gray-400 hover:text-white transition-colors transform hover:scale-110"
-            aria-label="Email"
-          >
-            <Mail size={32} />
-          </a>
         </div>
 
         <a
-          href="mailto:emircanbakar@gmail.com" // I'll guess or leave it generic. I'll use a generic "Say Hello" button.
+          href="mailto:ecbakar.dev@gmail.com"
           className="inline-block border border-white px-8 py-4 text-sm font-medium hover:bg-white hover:text-black transition-all duration-300"
         >
           Say Hello

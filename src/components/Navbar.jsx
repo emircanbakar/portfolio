@@ -28,23 +28,22 @@ const Navbar = () => {
         >
             <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
                 <a href="#" className="text-2xl font-bold tracking-tighter font-space">
-                    EB.
+                    ecbakar.dev
                 </a>
 
-                {/* Desktop Nav */}
                 <div className="hidden md:flex gap-8">
                     {navItems.map((item) => (
                         <a
                             key={item.name}
                             href={item.href}
-                            className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+                            className="relative text-sm font-medium text-gray-400 hover:text-white transition-colors group"
                         >
                             {item.name}
+                            <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full"></span>
                         </a>
                     ))}
                 </div>
 
-                {/* Mobile Menu Button */}
                 <button
                     className="md:hidden text-white"
                     onClick={() => setIsOpen(!isOpen)}
@@ -53,7 +52,6 @@ const Navbar = () => {
                 </button>
             </div>
 
-            {/* Mobile Nav */}
             {isOpen && (
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}

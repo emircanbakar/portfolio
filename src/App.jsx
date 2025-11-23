@@ -6,19 +6,13 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Loader from "./components/Loader/Loader";
+import Background from "./components/Background";
+import CustomCursor from "./components/CustomCursor";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
 
-  // The Loader component handles its own timing and calls onComplete
-  // But we can also have a fallback
   useEffect(() => {
-    // If the loader takes too long or for some reason doesn't finish, we force it.
-    // However, the Loader component has a hardcoded logic.
-    // Let's just rely on the Loader's onComplete prop if we use it,
-    // or we can use the existing logic if we want to control it here.
-    // The previous App.jsx had a timeout.
-    // The Loader component takes a prop `onComplete`.
   }, []);
 
   if (loading) {
@@ -26,9 +20,11 @@ const App = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[var(--bg-color)] text-[var(--text-primary)] selection:bg-white selection:text-black">
+    <div className="min-h-screen bg-[var(--bg-color)] text-[var(--text-primary)] selection:bg-white selection:text-black cursor-none">
+      <CustomCursor />
+      <Background />
       <Navbar />
-      <main>
+      <main className="relative z-10">
         <Hero />
         <About />
         <Experience />

@@ -16,8 +16,8 @@ const experiences = [
       "Completed an internship as a UI Developer. Gained hands-on experience in developing user interfaces and collaborating with cross-functional teams.",
   },
   {
-    company: "System Support",
-    role: "Specialist",
+    company: "LDAP",
+    role: "System Support Specialist",
     period: "2022",
     description:
       "Started professional career as a System Support specialist, handling technical issues and ensuring system stability.",

@@ -33,19 +33,28 @@ const About = () => {
               </h3>
               <ul className="grid grid-cols-2 gap-2 font-mono text-sm text-gray-400">
                 <li className="flex items-center gap-2">
-                  <span className="text-white">▹</span> JavaScript (ES6+)
+                  <span className="text-white">▹</span> JavaScript
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-white">▹</span> React
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-white">▹</span> Tailwind CSS
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-white">▹</span> HTML & CSS
+                  <span className="text-white">▹</span> Tailwind/ShadCN
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-white">▹</span> Git
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-white">▹</span> Redux
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-white">▹</span> Maplibre GL JS
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-white">▹</span> Next JS
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-white">▹</span> Node JS
                 </li>
               </ul>
             </div>

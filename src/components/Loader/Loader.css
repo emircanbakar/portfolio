@@ -4,6 +4,7 @@
   align-items: center;
   height: 100vh;
   background-color: #000;
+  font-family: "Space Mono", monospace;
 }
 
 .text {
@@ -18,6 +19,7 @@
   from {
     border-right-color: rgb(255, 255, 255);
   }
+
   to {
     border-right-color: transparent;
   }
