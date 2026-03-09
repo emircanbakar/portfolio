@@ -1,10 +1,9 @@
-
 import { useState, useEffect } from "react";
 import "./Loader.css";
 
 const Loader = ({ onComplete }) => {
   const [text, setText] = useState("");
-  const fullText = "ecbakar.dev";
+  const fullText = "ecbakar";
 
   useEffect(() => {
     let currentIndex = 0;

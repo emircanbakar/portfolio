@@ -13,8 +13,8 @@ const Contact = () => {
       >
         <h2 className="text-4xl font-bold mb-6 font-space">Get In Touch</h2>
         <p className="text-gray-400 text-lg mb-12 leading-relaxed">
-          I'm currently looking for new opportunities. Whether you have a question
-          or just want to say hi, I'll try my best to get back to you!
+          I'm currently looking for new opportunities. Whether you have a
+          question or just want to say hi, I'll try my best to get back to you!
         </p>
 
         <div className="flex justify-center gap-8 mb-12">
@@ -47,7 +47,7 @@ const Contact = () => {
         </div>
 
         <a
-          href="mailto:ecbakar.dev@gmail.com"
+          href="mailto:ecbakardev@gmail.com"
           className="inline-block border border-white px-8 py-4 text-sm font-medium hover:bg-white hover:text-black transition-all duration-300"
         >
           Say Hello
