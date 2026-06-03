@@ -26,7 +26,7 @@ export default function ProjectCard({ project, index }) {
             style={{
               width: "100%",
               height: "100%",
-              background: `linear-gradient(135deg, ${project.color}22 0%, ${project.color}08 50%, #0e0e1400 100%)`,
+              background: `linear-gradient(135deg, ${project.color}22 0%, ${project.color}08 50%, #11111100 100%)`,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",

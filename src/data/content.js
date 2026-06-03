@@ -32,7 +32,7 @@ export const projects = [
       "Interactive city map platform serving millions of Istanbul residents. Real-time geospatial data visualization with layer management and urban planning tools.",
     tech: ["React", "MapLibre GL", "GeoJSON", "WebGL"],
     link: "https://harita.istanbul",
-    color: "#6366f1",
+    color: "#e5e5e5",
     image: "/project-harita.png",
   },
   {
@@ -41,7 +41,7 @@ export const projects = [
       "Modern, responsive landing experience for a specialty coffee brand. Smooth scroll animations and elegant product showcasing.",
     tech: ["React", "CSS Animations", "Responsive Design"],
     link: "https://kahvem-coffee-website.vercel.app",
-    color: "#8b5cf6",
+    color: "#a3a3a3",
     image: "/project-coffee.png",
   },
   {
@@ -50,7 +50,7 @@ export const projects = [
       "Full-featured restaurant website with immersive food photography, menu browsing, and reservation interface.",
     tech: ["React", "Framer Motion", "Vite"],
     link: "https://yemekle-restaurant-website.vercel.app",
-    color: "#06b6d4",
+    color: "#737373",
     image: "/project-restaurant.png",
   },
 ];

@@ -114,7 +114,7 @@ export default function ParticleField() {
     <instancedMesh ref={meshRef} args={[null, null, PARTICLE_COUNT]}>
       <sphereGeometry args={[1, 6, 6]} />
       <meshBasicMaterial
-        color="#8b5cf6"
+        color="#ffffff"
         transparent
         opacity={0.4}
         toneMapped={false}
@@ -157,7 +157,7 @@ export function AmbientParticles() {
         />
       </bufferGeometry>
       <pointsMaterial
-        color="#3b82f6"
+        color="#888888"
         size={0.015}
         transparent
         opacity={0.3}
