@@ -128,12 +128,12 @@ export default function AboutScene() {
                 {item.role}
                 {item.company && ` — ${item.company}`}
               </div>
-              {item.current && (
+              {/* {item.current && (
                 <span className="timeline-current-badge">
                   <span className="timeline-current-pulse" />
                   Active
                 </span>
-              )}
+              )} */}
             </div>
           ))}
         </div>

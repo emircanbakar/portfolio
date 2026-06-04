@@ -19,7 +19,7 @@ export const about = {
   intro:
     "I craft high-end digital experiences at the intersection of design and engineering. Specializing in interactive frontends, motion, and WebGL — turning ideas into immersive products.",
   timeline: [
-    { year: "2022", role: "System Support", company: "" },
+    { year: "2022", role: "System Support", company: "LDAP" },
     { year: "2023", role: "UI Developer Intern", company: "Jotform" },
     { year: "2024", role: "Frontend Developer", company: "Istanbul Metropolitan Municipality", current: true },
   ],
