@@ -5,71 +5,61 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const NAV_ITEMS = [
-  { id: "hero", label: "Home" },
-  { id: "about", label: "About" },
-  { id: "projects", label: "Projects" },
-  { id: "skills", label: "Skills" },
-  { id: "contact", label: "Contact" },
+  { id: "hero",       label: "Home" },
+  { id: "about",      label: "About" },
+  { id: "experience", label: "Experience" },
+  { id: "contact",    label: "Contact" },
 ];
 
 /**
- * Navigation — Minimal floating dot navigation.
- * Tracks active section via ScrollTrigger and scrolls on click.
+ * Navigation — Minimal dot nav on the right edge.
+ * Shows after scrolling past hero. Tracks active section.
  */
 export default function Navigation() {
   const [activeSection, setActiveSection] = useState("hero");
-  const [isVisible, setIsVisible] = useState(false);
-  const navRef = useRef(null);
+  const [isVisible, setIsVisible]         = useState(false);
 
   useEffect(() => {
     const triggers = [];
 
-    // Show nav after scrolling past hero
     triggers.push(
       ScrollTrigger.create({
         trigger: "#about",
         start: "top 80%",
-        onEnter: () => setIsVisible(true),
+        onEnter:     () => setIsVisible(true),
         onLeaveBack: () => setIsVisible(false),
       })
     );
 
-    // Track which section is active
     NAV_ITEMS.forEach(({ id }) => {
       const el = document.getElementById(id);
       if (!el) return;
-
       triggers.push(
         ScrollTrigger.create({
           trigger: el,
           start: "top center",
-          end: "bottom center",
-          onEnter: () => setActiveSection(id),
+          end:   "bottom center",
+          onEnter:     () => setActiveSection(id),
           onEnterBack: () => setActiveSection(id),
         })
       );
     });
 
-    return () => {
-      triggers.forEach((t) => t.kill());
-    };
+    return () => triggers.forEach((t) => t.kill());
   }, []);
 
   const scrollTo = (id) => {
     const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
+    if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <nav
-      ref={navRef}
       className="nav"
       style={{
-        opacity: isVisible ? 1 : 0,
+        opacity:       isVisible ? 1 : 0,
         pointerEvents: isVisible ? "auto" : "none",
-        transition: "opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
+        transition:    "opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
       }}
     >
       {NAV_ITEMS.map(({ id, label }) => (
@@ -79,12 +69,11 @@ export default function Navigation() {
           onClick={() => scrollTo(id)}
           role="button"
           tabIndex={0}
+          onKeyDown={(e) => e.key === "Enter" && scrollTo(id)}
           aria-label={`Navigate to ${label}`}
         >
           <span className="nav-label">{label}</span>
-          <div
-            className={`nav-dot ${activeSection === id ? "nav-dot--active" : ""}`}
-          />
+          <div className={`nav-dot ${activeSection === id ? "nav-dot--active" : ""}`} />
         </div>
       ))}
     </nav>

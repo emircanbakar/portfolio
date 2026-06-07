@@ -6,7 +6,7 @@ export const meta = {
   name: "Emircan Bakar",
   title: "Frontend Developer",
   domain: "ecbakar.dev",
-  email: "emircanbakar@outlook.com",
+  email: "ecbakar.dev@gmail.com",
 };
 
 export const hero = {
@@ -17,11 +17,27 @@ export const hero = {
 
 export const about = {
   intro:
-    "I craft high-end digital experiences at the intersection of design and engineering. Specializing in interactive frontends, motion, and WebGL — turning ideas into immersive products.",
+    "I am a passionate Frontend Developer dedicated to crafting high-end digital experiences at the intersection of design and engineering. I specialize in building interactive web applications, focusing on intuitive user interfaces, fluid motion, and performance optimization. My goal is to transform complex problems into elegant, immersive, and accessible digital products.",
   timeline: [
-    { year: "2022", role: "System Support", company: "LDAP" },
-    { year: "2023", role: "UI Developer Intern", company: "Jotform" },
-    { year: "2024", role: "Frontend Developer", company: "Istanbul Metropolitan Municipality", current: true },
+    {
+      year: "2022",
+      role: "System Support",
+      company: "LDAP",
+      description: "Provided technical support, maintained IT infrastructure, and ensured smooth daily operations."
+    },
+    {
+      year: "2023",
+      role: "UI Developer Intern",
+      company: "Jotform",
+      description: "Contributed to building modern, responsive, and accessible UI components. Collaborated with design and engineering teams to enhance user experience across core products."
+    },
+    {
+      year: "2024",
+      role: "Frontend Developer",
+      company: "Istanbul Metropolitan Municipality",
+      current: true,
+      description: "Developing scalable frontend architectures and data-driven mapping applications for millions of citizens. Working extensively with React, MapLibre GL, and modern UI libraries."
+    },
   ],
 };
 
@@ -56,15 +72,15 @@ export const projects = [
 ];
 
 export const skills = {
-  featured: ["React", "Next.js", "Three.js", "GSAP", "TypeScript"],
+  featured: ["React", "Next.js", "JavaScript", "Node.js", "TypeScript"],
   core: [
-    "JavaScript",
-    "HTML5 / CSS3",
     "WebGL",
+    "Three.js",
+    "HTML5 / CSS3",
     "Framer Motion",
-    "Vite",
     "Tailwind CSS",
-    "Node.js",
+    "GSAP",
+    "MaplibreGL",
     "Git",
     "REST APIs",
     "Responsive Design",
