@@ -1,39 +1,34 @@
-import { useState, useEffect } from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Loader from "./components/Loader/Loader";
-import Background from "./components/Background";
-import CustomCursor from "./components/CustomCursor";
+import SmoothScroll from "./components/SmoothScroll";
+import Navigation from "./components/Navigation";
+import HeroScene from "./components/scenes/HeroScene";
+import AboutScene from "./components/scenes/AboutScene";
+import ExperienceScene from "./components/scenes/ExperienceScene";
+import ContactScene from "./components/scenes/ContactScene";
 
-const App = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-  }, []);
-
-  if (loading) {
-    return <Loader onComplete={() => setLoading(false)} />;
-  }
-
+/**
+ * App — Root component.
+ * Orchestrates loading, smooth scroll, navigation, and all scenes.
+ * Three.js / ParticleField removed in favour of a clean editorial layout.
+ */
+function AppContent() {
   return (
-    <div className="min-h-screen bg-[var(--bg-color)] text-[var(--text-primary)] selection:bg-white selection:text-black cursor-none">
-      <CustomCursor />
-      <Background />
-      <Navbar />
-      <main className="relative z-10">
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Contact />
-      </main>
-    </div>
+    <>
+      {/* Navigation overlay */}
+      <Navigation />
+
+      {/* Scroll story */}
+      <SmoothScroll>
+        <main>
+          <HeroScene />
+          <AboutScene />
+          <ExperienceScene />
+          <ContactScene />
+        </main>
+      </SmoothScroll>
+    </>
   );
-};
+}
 
-export default App;
-
+export default function App() {
+  return <AppContent />;
+}
