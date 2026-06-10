@@ -248,6 +248,10 @@ button {
   color: var(--text-primary);
   overflow: hidden;
   user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: default;
 }
 
 .hero-name-inner {
@@ -661,6 +665,7 @@ button {
   display: flex;
   gap: var(--space-xl);
   align-items: center;
+  justify-content: center;
 }
 
 .contact-link {

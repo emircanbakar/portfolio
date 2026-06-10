@@ -76,15 +76,13 @@ export const skills = {
   core: [
     "WebGL",
     "Three.js",
-    "HTML5 / CSS3",
     "Framer Motion",
-    "Tailwind CSS",
     "GSAP",
     "MaplibreGL",
-    "Git",
     "REST APIs",
     "Responsive Design",
-    "Performance",
+    "Performance Optimization",
+    "Core Web Vitals",
     "UI/UX",
   ],
 };

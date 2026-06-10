@@ -1,6 +1,4 @@
-import { useState, useCallback } from "react";
 import SmoothScroll from "./components/SmoothScroll";
-import Loader from "./components/Loader";
 import Navigation from "./components/Navigation";
 import HeroScene from "./components/scenes/HeroScene";
 import AboutScene from "./components/scenes/AboutScene";
@@ -32,16 +30,5 @@ function AppContent() {
 }
 
 export default function App() {
-  const [loading, setLoading] = useState(true);
-
-  const handleLoadComplete = useCallback(() => {
-    setLoading(false);
-  }, []);
-
-  return (
-    <>
-      {loading && <Loader onComplete={handleLoadComplete} />}
-      {!loading && <AppContent />}
-    </>
-  );
+  return <AppContent />;
 }
